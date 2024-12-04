@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2D4A337-57E7-4D72-B944-C4CF2878CFDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Read</RootNamespace>
+    <AssemblyName>Read</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\books_128px_1114029_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="form\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\ChaptersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\ChaptersForm.Designer.cs">
+      <DependentUpon>ChaptersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MarkersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MarkersForm.Designer.cs">
+      <DependentUpon>MarkersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\BookshelfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\BookshelfForm.Designer.cs">
+      <DependentUpon>BookshelfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\FullTextSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FullTextSearchForm.Designer.cs">
+      <DependentUpon>FullTextSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SearchBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SearchBookForm.Designer.cs">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\HotKeyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\HotKeyForm.Designer.cs">
+      <DependentUpon>HotKeyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\Book.cs" />
+    <Compile Include="model\Chapter.cs" />
+    <Compile Include="model\HotKey.cs" />
+    <Compile Include="model\Marker.cs" />
+    <Compile Include="model\PresetColor.cs" />
+    <Compile Include="model\ReadCache.cs" />
+    <Compile Include="model\SearchResult.cs" />
+    <Compile Include="model\Setting.cs" />
+    <Compile Include="plugin\MaskPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="plugin\MenuBarColor.cs" />
+    <Compile Include="plugin\MyOpaqueLayer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="plugin\MyProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="plugin\ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="plugin\PanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="plugin\TextBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="plugin\AppHotKey.cs" />
+    <Compile Include="service\ColorUtil.cs" />
+    <Compile Include="service\Common.cs" />
+    <Compile Include="service\EncodingType.cs" />
+    <Compile Include="service\HotKeyService.cs" />
+    <Compile Include="service\LoadXmlService.cs" />
+    <Compile Include="service\ReadService.cs" />
+    <EmbeddedResource Include="form\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\ChaptersForm.resx">
+      <DependentUpon>ChaptersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MarkersForm.resx">
+      <DependentUpon>MarkersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\BookshelfForm.resx">
+      <DependentUpon>BookshelfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\FullTextSearchForm.resx">
+      <DependentUpon>FullTextSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SearchBookForm.resx">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\HotKeyForm.resx">
+      <DependentUpon>HotKeyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="plugin\PanelEx.resx">
+      <DependentUpon>PanelEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-121204193R5-50.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeyCodes.xml" />
+    <None Include="Resources\DefaultHotKey.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\DefaultPresetColor.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\books_128px_1114029_easyicon.net.ico" />
+    <Content Include="Resources\更新日志.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
